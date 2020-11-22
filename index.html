@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <script>
+    window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
+  </script>
+  <script>
     var cacheName = 'hate-pwa';
 var filesToCache = [
   '/index.html',
